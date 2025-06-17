@@ -82,17 +82,20 @@
   </div>
   <section class="home-sectionAdmin">
     <nav>
-        <div class="sidebar-button">
+        <div class="sidebar-button" class="search-box-ad">
           <i class='bx bx-menu sidebarBtn'></i>
           {{-- <span class="dashboard">Dashboard</span> --}}
         </div>
-
-        <div class="search-box-ad">
+        <form class="input-group search-box-ad" action="{{ route('searchAdmin') }}">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button button type="submit" class="btn btn-outline-dark" data-mdb-ripple-init>Search</button>
+            </form>
+        {{-- <div class="search-box-ad">
             <form action="{{ route('searchAdmin') }}">
           <input type="text" placeholder="Search..."  name="search">
           <button  type="submit" id="navbar-srh-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        </div>
+        </div> --}}
 
         <div class="profile-details">
           <img src="/imagesAdmin/{{ auth('admin')->user()->avatar}}" alt="">
