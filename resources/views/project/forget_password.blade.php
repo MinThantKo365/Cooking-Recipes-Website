@@ -21,7 +21,7 @@
 
 <section class="container d-flex justify-content-center align-items-center mt-5 md-12 mb-5 p-5" id="login-sec">
 
-    <form class="" action="" method="post" id="login-form">
+    <form class="" action="{{ route('forgotPwdPost') }}" method="post" id="login-form">
     @csrf
 
   <div class="w-100 m-auto text-center"><h2>Reset Password</h2></div>
